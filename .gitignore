@@ -16,3 +16,4 @@ gradle-app.setting
 .idea/misc.xml
 .idea/.name
 *.class
+sandbox/src/main/java/ru/stqa/pft/sandbox/MyFirstProgram.java
