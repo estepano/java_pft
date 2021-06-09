@@ -13,8 +13,16 @@ public class NavigationHelper extends HelperBase {
         click(By.linkText("groups"));
     }
 
+    public void goToContactPage() {
+        click(By.linkText("home"));
+    }
+
     public void returnToHomepage() {
         click(By.linkText("home"));
+    }
+
+    public void switchToDialogBox() {
+        wd.switchTo().alert().accept();
     }
 
 

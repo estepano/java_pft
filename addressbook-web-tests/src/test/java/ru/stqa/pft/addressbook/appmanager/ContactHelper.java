@@ -2,10 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import ru.stqa.pft.addressbook.model.BdayData;
-import ru.stqa.pft.addressbook.model.EmailData;
-import ru.stqa.pft.addressbook.model.Name;
-import ru.stqa.pft.addressbook.model.PhoneNumbers;
+import ru.stqa.pft.addressbook.model.*;
 
 public class ContactHelper extends HelperBase {
 
@@ -60,5 +57,31 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("add new"));
         click(By.name("firstname"));
         clear(By.name("firstname"));
+    }
+
+    public void editContact() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void editCompanyData(CompanyData companyData) {
+        click(By.xpath("//form[@action='edit.php']"));
+        type(By.name("company"), companyData.getCompany());
+    }
+
+    public void updateContact() {
+        click(By.name("update"));
+    }
+
+    public void chooseContact() {
+        //click(By.id("3"));
+        click(By.name("selected[]"));
+    }
+
+    public void deleteContact() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void submitContactDeletion() {
+
     }
 }
